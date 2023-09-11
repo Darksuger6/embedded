@@ -1,0 +1,150 @@
+C51 COMPILER V9.59.0.0   MAIN                                                              01/20/2023 19:07:41 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.lst) OB
+                    -JECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "car.h"
+   3          #include "cargo.h"
+   4          #include "chaoshengbo.h"
+   5          #include "Delay.h"
+   6          
+   7          
+   8          
+   9          void main ()
+  10          {               
+  11   1      
+  12   1                      car();          
+  13   1                      chaoshengbo();
+  14   1      
+  15   1      }       
+  16                          
+  17          //              IN21=1;
+  18          //              IN22=0;
+  19          //              IN23=1;
+  20          //              IN24=0;
+  21          //      
+  22          //      
+  23          //              Timer0_Init();  
+  24          //              Timer1_Init();  
+  25          //              
+  26          //              TMOD = 0x11;
+  27          //              TL1=0;
+  28          //              TH1=0;
+  29          //      
+  30          //              Trig=1;
+  31          //              Delay(20);
+  32          //              Trig=0;
+  33          //              
+  34          //              while(!Echo);
+  35          //              TR1=1;
+  36          //              while(Echo);
+  37          //              TR1=0;
+  38          //              result=((TH1*256+TL1)*0.034)/2+1;
+  39          //      
+  40          //              if(instance>result)
+  41          //              {
+  42          //                      Speedleft = 0;
+  43          //                      Speedright = 0;
+  44          //                      Delay(1000);
+  45          //              }
+  46          //              else
+  47          //              {       
+  48          //                              while(1)
+  49          //                              {
+  50          //                              if(leftlight == 1 && rightlight == 1 )
+  51          //                              {
+  52          //                                      Speedleft = 0;
+  53          ////                                    Speedright = 0;
+  54          //                              }
+C51 COMPILER V9.59.0.0   MAIN                                                              01/20/2023 19:07:41 PAGE 2   
+
+  55          //                              if(leftlight == 0 && rightlight == 0 )
+  56          //                              {       
+  57          //                                      Speedleft = 100;
+  58          ////                                    Speedright = 100;
+  59          //                              }
+  60          //                              if(leftlight == 0 && rightlight == 1)
+  61          //                              {       
+  62          //                                      Speedleft = 100;
+  63          ////                                    Speedright = 50;
+  64          //                                      
+  65          //                              }
+  66          //                              if(leftlight == 1 && rightlight == 0)
+  67          //                              {       
+  68          //                                      Speedleft = 50;
+  69          ////                                    Speedright = 100;
+  70          //                              }
+  71          //                              }
+  72          //              
+  73          
+  74          
+  75          
+  76          
+  77          //void Timer1_Routine() interrupt 3
+  78          //{
+  79          //      TL1 = 0xA4;             
+  80          //      TH1 = 0xFF;             
+  81          //      Counterright++; //
+  82          //      if (Counterright < Speedright)  
+  83          //      {
+  84          //              ENA=1;
+  85          //              ENB=1;
+  86          //              IN23=1;
+  87          //              IN24=0;
+  88          //      }
+  89          //      else                            
+  90          //      {
+  91          //              ENA=0;          
+  92          //              ENB=0;
+  93          //      }
+  94          //      if(Counterright==100)
+  95          //      {
+  96          //              Counterright=0;
+  97          //      }
+  98          //}
+  99          
+ 100          
+ 101          //void Timer0_Routine() interrupt 1
+ 102          //{
+ 103          //      TL0 = 0xA4;             
+ 104          //      TH0 = 0xFF;             
+ 105          //      Counterleft++;  
+ 106          //      if (Counterleft < Speedleft)    
+ 107          //      {
+ 108          //              ENA=1;
+ 109          //              ENB=1;
+ 110          //              IN21=1;
+ 111          //              IN22=0;
+ 112          //      }
+ 113          //      else                            
+ 114          //      {
+ 115          //              ENA=0;          
+ 116          //              ENB=0;
+C51 COMPILER V9.59.0.0   MAIN                                                              01/20/2023 19:07:41 PAGE 3   
+
+ 117          //      }
+ 118          //      if(Counterleft==100)
+ 119          //      {
+ 120          //              Counterleft=0;
+ 121          //      }
+ 122          //}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      6    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

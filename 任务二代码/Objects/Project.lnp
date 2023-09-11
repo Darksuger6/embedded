@@ -1,0 +1,8 @@
+".\Objects\main.obj",
+".\Objects\car.obj",
+".\Objects\carstop.obj",
+".\Objects\cargo.obj",
+".\Objects\chaoshengbo.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\Project" 
+PRINT(".\Listings\Project.m51") RAMSIZE(256) 

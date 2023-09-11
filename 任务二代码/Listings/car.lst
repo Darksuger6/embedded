@@ -1,0 +1,185 @@
+C51 COMPILER V9.59.0.0   CAR                                                               01/20/2023 19:07:41 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE CAR
+OBJECT MODULE PLACED IN .\Objects\car.obj
+COMPILER INVOKED BY: D:\C51\BIN\C51.EXE car.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\car.lst) OBJE
+                    -CT(.\Objects\car.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "Delay.h"
+   3          
+   4          
+   5          sbit leftlight=P0^2;
+   6          sbit rightlight=P0^3;
+   7          sbit midlight=P0^1;
+   8          
+   9          sbit ENA=P1^5;
+  10          sbit ENB=P1^6;
+  11          
+  12          sbit IN21=P1^1;//右后轮
+  13          sbit IN22=P1^2;
+  14          
+  15          sbit IN23=P1^3;//左后轮
+  16          sbit IN24=P1^4;
+  17          
+  18          //unsigned char counter1,speed; //¼ÆÊýÖµºÍ±È½ÏÖµ£¬ÓÃÓÚÊä³öPWM
+  19          
+  20          //void Timer0_Init()            //100Î¢Ãë@11.0592MHz
+  21          //{
+  22          //      TMOD = 0x11;    //ÉèÖÃ¶¨Ê±Æ÷Ä£Ê½
+  23          //      TL0 = 0xA4;             //ÉèÖÃ¶¨Ê±³õÊ¼Öµ
+  24          //      TH0 = 0xFF;             //ÉèÖÃ¶¨Ê±³õÊ¼Öµ
+  25          //      TF0 = 0;                        //Çå³ýTF0±êÖ¾
+  26          //      TR0 = 1;                        //¶¨Ê±Æ÷0¿ªÊ¼¼ÆÊ±
+  27          //      ET0 = 1;      //¶¨Ê±Æ÷0µÄÖÐ¶ËÔÊÐí¿ª¹Ø
+  28          //      EA  = 1;      //¶¨Ê±Æ÷×Ü¿ª¹Ø
+  29          //      PT0 = 1;      //ÉèÖÃ¶¨Ê±Æ÷Îª¸ßµÍ¿ØÖÆÓÅÏÈ¼¶£¬1Îª¸ßÓÅÏÈ¼¶£¬0Îª�
+             -�ÍÓÅÏÈ¼¶
+  30          //}
+  31          //void Timer0_Routine() interrupt 1  //ÖÐ¶Ïº¯Êý
+  32          //{
+  33          
+  34          //      TL0 = 0xA4;             //ÉèÖÃ¶¨Ê±³õÊ¼Öµ
+  35          //      TH0 = 0xFF;             //ÉèÖÃ¶¨Ê±³õÊ¼Öµ
+  36          //      
+  37          //      counter1++;
+  38          //      if (counter1 >= 100)
+  39          //      {
+  40          //              counter1 = 0;
+  41          //      }
+  42          //      if (counter1 < speed)
+  43          //      {
+  44          //              ENA = 1;
+  45          //              ENB = 1;
+  46          
+  47          //      }
+  48          //      else
+  49          //      {
+  50          //              ENA = 0;
+  51          //              ENB = 0;
+  52          
+  53          //      }
+C51 COMPILER V9.59.0.0   CAR                                                               01/20/2023 19:07:41 PAGE 2   
+
+  54          //}
+  55          
+  56          
+  57                                  void car()
+  58                                  {
+  59   1                                      if(leftlight == 1 && midlight==1&& rightlight == 1)
+  60   1                                      {
+  61   2                                              
+  62   2                                              IN21=1;
+  63   2                                              IN22=1;
+  64   2                                              IN23=1;
+  65   2                                              IN24=1;
+  66   2                                      }
+  67   1                                      if(leftlight == 0 && midlight==0&& rightlight == 0)
+  68   1                                      {       
+  69   2                                              IN21=1;
+  70   2                                              IN22=0;
+  71   2                                              IN23=1;
+  72   2                                              IN24=0;
+  73   2                                      }
+  74   1                                      if(leftlight == 0 && midlight==0&& rightlight == 1)
+  75   1                                      {       
+  76   2                                              
+  77   2                                              IN21=1;
+  78   2                                              IN22=0;
+  79   2                                              IN23=0;
+  80   2                                              IN24=1;
+  81   2                                              
+  82   2                                      }
+  83   1              
+  84   1                                      if(leftlight == 0 && midlight==1&& rightlight == 1)
+  85   1                                      {       
+  86   2      
+  87   2                                                                              
+  88   2              
+  89   2                                                              IN21=1;
+  90   2                                                              IN22=0;
+  91   2                                                              IN23=1;
+  92   2                                                              IN24=0;
+  93   2                                                              Delay(130);
+  94   2                                                              IN21=1;
+  95   2                                                              IN22=0;
+  96   2                                                              IN23=0;
+  97   2                                                              IN24=1;
+  98   2                                                              Delay(300);
+  99   2                              
+ 100   2      
+ 101   2                                      }
+ 102   1                              if(leftlight == 1 && midlight==0&& rightlight == 0)
+ 103   1                                      {       
+ 104   2                                                              
+ 105   2                                                              IN21=0;
+ 106   2                                                              IN22=1;
+ 107   2                                                              IN23=1;
+ 108   2                                                              IN24=0;
+ 109   2                                      }
+ 110   1                                  if(leftlight == 1 && midlight==1&& rightlight == 0)
+ 111   1                                      {       
+ 112   2      
+ 113   2                                                              
+ 114   2      //                                                      IN21=1;
+ 115   2      //                                                      IN22=0;
+C51 COMPILER V9.59.0.0   CAR                                                               01/20/2023 19:07:41 PAGE 3   
+
+ 116   2      //                                                      IN23=0;
+ 117   2      //                                                      IN24=1;
+ 118   2      //                                                      Delay(130);
+ 119   2      //                                              if(leftlight == 1 && midlight==1&& rightlight == 0)
+ 120   2      //                                              {
+ 121   2      //                      
+ 122   2                                                              IN21=1;
+ 123   2                                                              IN22=0;
+ 124   2                                                              IN23=1;
+ 125   2                                                              IN24=0;
+ 126   2                                                              Delay(130);
+ 127   2                                                              IN21=0;
+ 128   2                                                              IN22=1;
+ 129   2                                                              IN23=1;
+ 130   2                                                              IN24=0;
+ 131   2                                                              Delay(300);
+ 132   2      //                                              }
+ 133   2      //                                              else
+ 134   2      //                                              {
+ 135   2      //                                                      IN21=1;
+ 136   2      //                                                      IN22=0;
+ 137   2      //                                                      IN23=1;
+ 138   2      //                                                      IN24=0;
+ 139   2      //                                              }       
+ 140   2                                      }
+ 141   1                                      if(leftlight == 0 && midlight==1&& rightlight == 0)
+ 142   1                                      {
+ 143   2                                              IN21=1;
+ 144   2                                              IN22=0;
+ 145   2                                              IN23=1;
+ 146   2                                              IN24=0;
+ 147   2                                      }
+ 148   1                                      if(leftlight == 1 && midlight==0&& rightlight == 1)
+ 149   1                                      {       
+ 150   2                                              IN21=1;
+ 151   2                                              IN22=0;
+ 152   2                                              IN23=1;
+ 153   2                                              IN24=0;
+ 154   2                                      }
+ 155   1                              
+ 156   1                              }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    181    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
