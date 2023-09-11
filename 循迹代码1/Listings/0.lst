@@ -1,0 +1,43 @@
+C51 COMPILER V9.59.0.0   0                                                                 01/17/2023 21:18:02 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE 0
+OBJECT MODULE PLACED IN .\Objects\0.obj
+COMPILER INVOKED BY: D:\C51\BIN\C51.EXE 0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\0.lst) OBJECT(.
+                    -\Objects\0.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          
+   4          
+   5          void Timer0_Init()              //100微秒@11.0592MHz
+   6          {
+   7   1              TMOD = 0x11;    //设置定时器模式
+   8   1              TL0 = 0xA4;             //设置定时初始值
+   9   1              TH0 = 0xFF;             //设置定时初始值
+  10   1              TF0 = 0;                        //清除TF0标志
+  11   1              TR0 = 1;                        //定时器0开始计时
+  12   1              ET0 = 1;      //定时器0的中端允许开关
+  13   1              EA  = 1;      //定时器总开关
+  14   1              PT0 = 1;      //设置定时器为高低控制优先级，1为高优先级，0为低优先级
+  15   1      }
+  16          
+  17          
+  18          \
+  19          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     20    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
