@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.0.0   IRSYSTEM                                                          01/27/2022 14:32:06 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE IRSYSTEM
+OBJECT MODULE PLACED IN .\Objects\IRsystem.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE IRsystem.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -IRsystem.lst) TABS(2) OBJECT(.\Objects\IRsystem.obj)
+
+line level    source
+
+   1          /**********红外避障模块**********/
+   2          //判断小车四角是否有障碍物
+   3          //LF左前  RF右前  LR左后  RR右后
+   4          /**********红外避障模块**********/
+   5          
+   6          #include <REGX52.H>
+   7          #include "car.h"
+   8          
+   9          sbit IR_LF = P1^2;  //左前红外传感器位点
+  10          sbit IR_RF = P1^1;  //右前红外传感器位点
+  11          sbit IR_LR = P1^3;  //左后红外传感器位点
+  12          sbit IR_RR = P1^4;  //右后红外传感器位点
+  13          
+  14          int IRsystem ()
+  15          {
+  16   1        if(IR_LF == 0)
+  17   1        {car_stop ();}
+  18   1        if(IR_RF == 0)
+  19   1        {car_stop ();}
+  20   1        if(IR_LR == 0)
+  21   1        {car_stop ();}
+  22   1        if(IR_RR == 0)
+  23   1        {car_stop ();}
+  24   1        
+  25   1      }
+  26          
+  27          
+*** WARNING C290 IN LINE 25 OF IRsystem.c: missing return value
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     25    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

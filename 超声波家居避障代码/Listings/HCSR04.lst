@@ -1,0 +1,210 @@
+C51 COMPILER V9.60.0.0   HCSR04                                                            01/19/2022 16:27:34 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE HCSR04
+OBJECT MODULE PLACED IN .\Objects\HCSR04.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE HCSR04.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\HC
+                    -SR04.lst) TABS(2) OBJECT(.\Objects\HCSR04.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include <reg52.h>
+*** ERROR C231 IN LINE 13 OF D:\Keil_v5\C51\Inc\reg52.h: 'P0': redefinition
+*** ERROR C231 IN LINE 14 OF D:\Keil_v5\C51\Inc\reg52.h: 'P1': redefinition
+*** ERROR C231 IN LINE 15 OF D:\Keil_v5\C51\Inc\reg52.h: 'P2': redefinition
+*** ERROR C231 IN LINE 16 OF D:\Keil_v5\C51\Inc\reg52.h: 'P3': redefinition
+*** ERROR C231 IN LINE 17 OF D:\Keil_v5\C51\Inc\reg52.h: 'PSW': redefinition
+*** ERROR C231 IN LINE 18 OF D:\Keil_v5\C51\Inc\reg52.h: 'ACC': redefinition
+*** ERROR C231 IN LINE 19 OF D:\Keil_v5\C51\Inc\reg52.h: 'B': redefinition
+*** ERROR C231 IN LINE 20 OF D:\Keil_v5\C51\Inc\reg52.h: 'SP': redefinition
+*** ERROR C231 IN LINE 21 OF D:\Keil_v5\C51\Inc\reg52.h: 'DPL': redefinition
+*** ERROR C231 IN LINE 22 OF D:\Keil_v5\C51\Inc\reg52.h: 'DPH': redefinition
+*** ERROR C231 IN LINE 23 OF D:\Keil_v5\C51\Inc\reg52.h: 'PCON': redefinition
+*** ERROR C231 IN LINE 24 OF D:\Keil_v5\C51\Inc\reg52.h: 'TCON': redefinition
+*** ERROR C231 IN LINE 25 OF D:\Keil_v5\C51\Inc\reg52.h: 'TMOD': redefinition
+*** ERROR C231 IN LINE 26 OF D:\Keil_v5\C51\Inc\reg52.h: 'TL0': redefinition
+*** ERROR C231 IN LINE 27 OF D:\Keil_v5\C51\Inc\reg52.h: 'TL1': redefinition
+*** ERROR C231 IN LINE 28 OF D:\Keil_v5\C51\Inc\reg52.h: 'TH0': redefinition
+*** ERROR C231 IN LINE 29 OF D:\Keil_v5\C51\Inc\reg52.h: 'TH1': redefinition
+*** ERROR C231 IN LINE 30 OF D:\Keil_v5\C51\Inc\reg52.h: 'IE': redefinition
+*** ERROR C231 IN LINE 31 OF D:\Keil_v5\C51\Inc\reg52.h: 'IP': redefinition
+*** ERROR C231 IN LINE 32 OF D:\Keil_v5\C51\Inc\reg52.h: 'SCON': redefinition
+*** ERROR C231 IN LINE 33 OF D:\Keil_v5\C51\Inc\reg52.h: 'SBUF': redefinition
+*** ERROR C231 IN LINE 36 OF D:\Keil_v5\C51\Inc\reg52.h: 'T2CON': redefinition
+*** ERROR C231 IN LINE 37 OF D:\Keil_v5\C51\Inc\reg52.h: 'RCAP2L': redefinition
+*** ERROR C231 IN LINE 38 OF D:\Keil_v5\C51\Inc\reg52.h: 'RCAP2H': redefinition
+*** ERROR C231 IN LINE 39 OF D:\Keil_v5\C51\Inc\reg52.h: 'TL2': redefinition
+*** ERROR C231 IN LINE 40 OF D:\Keil_v5\C51\Inc\reg52.h: 'TH2': redefinition
+*** ERROR C231 IN LINE 45 OF D:\Keil_v5\C51\Inc\reg52.h: 'CY': redefinition
+*** ERROR C231 IN LINE 46 OF D:\Keil_v5\C51\Inc\reg52.h: 'AC': redefinition
+*** ERROR C231 IN LINE 47 OF D:\Keil_v5\C51\Inc\reg52.h: 'F0': redefinition
+*** ERROR C231 IN LINE 48 OF D:\Keil_v5\C51\Inc\reg52.h: 'RS1': redefinition
+*** ERROR C231 IN LINE 49 OF D:\Keil_v5\C51\Inc\reg52.h: 'RS0': redefinition
+*** ERROR C231 IN LINE 50 OF D:\Keil_v5\C51\Inc\reg52.h: 'OV': redefinition
+*** ERROR C231 IN LINE 51 OF D:\Keil_v5\C51\Inc\reg52.h: 'P': redefinition
+*** ERROR C231 IN LINE 54 OF D:\Keil_v5\C51\Inc\reg52.h: 'TF1': redefinition
+*** ERROR C231 IN LINE 55 OF D:\Keil_v5\C51\Inc\reg52.h: 'TR1': redefinition
+*** ERROR C231 IN LINE 56 OF D:\Keil_v5\C51\Inc\reg52.h: 'TF0': redefinition
+*** ERROR C231 IN LINE 57 OF D:\Keil_v5\C51\Inc\reg52.h: 'TR0': redefinition
+*** ERROR C231 IN LINE 58 OF D:\Keil_v5\C51\Inc\reg52.h: 'IE1': redefinition
+*** ERROR C231 IN LINE 59 OF D:\Keil_v5\C51\Inc\reg52.h: 'IT1': redefinition
+*** ERROR C231 IN LINE 60 OF D:\Keil_v5\C51\Inc\reg52.h: 'IE0': redefinition
+*** ERROR C231 IN LINE 61 OF D:\Keil_v5\C51\Inc\reg52.h: 'IT0': redefinition
+*** ERROR C231 IN LINE 64 OF D:\Keil_v5\C51\Inc\reg52.h: 'EA': redefinition
+*** ERROR C231 IN LINE 65 OF D:\Keil_v5\C51\Inc\reg52.h: 'ET2': redefinition
+*** ERROR C231 IN LINE 66 OF D:\Keil_v5\C51\Inc\reg52.h: 'ES': redefinition
+*** ERROR C231 IN LINE 67 OF D:\Keil_v5\C51\Inc\reg52.h: 'ET1': redefinition
+*** ERROR C231 IN LINE 68 OF D:\Keil_v5\C51\Inc\reg52.h: 'EX1': redefinition
+*** ERROR C231 IN LINE 69 OF D:\Keil_v5\C51\Inc\reg52.h: 'ET0': redefinition
+*** ERROR C231 IN LINE 70 OF D:\Keil_v5\C51\Inc\reg52.h: 'EX0': redefinition
+*** ERROR C231 IN LINE 73 OF D:\Keil_v5\C51\Inc\reg52.h: 'PT2': redefinition
+*** ERROR C231 IN LINE 74 OF D:\Keil_v5\C51\Inc\reg52.h: 'PS': redefinition
+*** ERROR C231 IN LINE 75 OF D:\Keil_v5\C51\Inc\reg52.h: 'PT1': redefinition
+*** ERROR C231 IN LINE 76 OF D:\Keil_v5\C51\Inc\reg52.h: 'PX1': redefinition
+C51 COMPILER V9.60.0.0   HCSR04                                                            01/19/2022 16:27:34 PAGE 2   
+
+*** ERROR C231 IN LINE 77 OF D:\Keil_v5\C51\Inc\reg52.h: 'PT0': redefinition
+*** ERROR C231 IN LINE 78 OF D:\Keil_v5\C51\Inc\reg52.h: 'PX0': redefinition
+*** ERROR C231 IN LINE 81 OF D:\Keil_v5\C51\Inc\reg52.h: 'RD': redefinition
+*** ERROR C231 IN LINE 82 OF D:\Keil_v5\C51\Inc\reg52.h: 'WR': redefinition
+*** ERROR C231 IN LINE 83 OF D:\Keil_v5\C51\Inc\reg52.h: 'T1': redefinition
+*** ERROR C231 IN LINE 84 OF D:\Keil_v5\C51\Inc\reg52.h: 'T0': redefinition
+*** ERROR C231 IN LINE 85 OF D:\Keil_v5\C51\Inc\reg52.h: 'INT1': redefinition
+*** ERROR C231 IN LINE 86 OF D:\Keil_v5\C51\Inc\reg52.h: 'INT0': redefinition
+*** ERROR C231 IN LINE 87 OF D:\Keil_v5\C51\Inc\reg52.h: 'TXD': redefinition
+*** ERROR C231 IN LINE 88 OF D:\Keil_v5\C51\Inc\reg52.h: 'RXD': redefinition
+*** ERROR C231 IN LINE 91 OF D:\Keil_v5\C51\Inc\reg52.h: 'SM0': redefinition
+*** ERROR C231 IN LINE 92 OF D:\Keil_v5\C51\Inc\reg52.h: 'SM1': redefinition
+*** ERROR C231 IN LINE 93 OF D:\Keil_v5\C51\Inc\reg52.h: 'SM2': redefinition
+*** ERROR C231 IN LINE 94 OF D:\Keil_v5\C51\Inc\reg52.h: 'REN': redefinition
+*** ERROR C231 IN LINE 95 OF D:\Keil_v5\C51\Inc\reg52.h: 'TB8': redefinition
+*** ERROR C231 IN LINE 96 OF D:\Keil_v5\C51\Inc\reg52.h: 'RB8': redefinition
+*** ERROR C231 IN LINE 97 OF D:\Keil_v5\C51\Inc\reg52.h: 'TI': redefinition
+*** ERROR C231 IN LINE 98 OF D:\Keil_v5\C51\Inc\reg52.h: 'RI': redefinition
+*** ERROR C231 IN LINE 101 OF D:\Keil_v5\C51\Inc\reg52.h: 'T2EX': redefinition
+*** ERROR C231 IN LINE 102 OF D:\Keil_v5\C51\Inc\reg52.h: 'T2': redefinition
+*** ERROR C231 IN LINE 105 OF D:\Keil_v5\C51\Inc\reg52.h: 'TF2': redefinition
+*** ERROR C231 IN LINE 106 OF D:\Keil_v5\C51\Inc\reg52.h: 'EXF2': redefinition
+*** ERROR C231 IN LINE 107 OF D:\Keil_v5\C51\Inc\reg52.h: 'RCLK': redefinition
+*** ERROR C231 IN LINE 108 OF D:\Keil_v5\C51\Inc\reg52.h: 'TCLK': redefinition
+*** ERROR C231 IN LINE 109 OF D:\Keil_v5\C51\Inc\reg52.h: 'EXEN2': redefinition
+*** ERROR C231 IN LINE 110 OF D:\Keil_v5\C51\Inc\reg52.h: 'TR2': redefinition
+*** ERROR C231 IN LINE 111 OF D:\Keil_v5\C51\Inc\reg52.h: 'C_T2': redefinition
+*** ERROR C231 IN LINE 112 OF D:\Keil_v5\C51\Inc\reg52.h: 'CP_RL2': redefinition
+   3          #include <intrins.h>
+   4          #define uchar unsigned char
+   5          #define obstructionDis 20   //到障碍物距离
+   6          
+   7          sbit LED = P0^0;            //距离小于20就亮
+   8          sbit Trig = P1^1;         //TRIG用来发送方波
+   9          sbit Echo = P1^2;         //ECHO用来接收方波
+  10                
+  11          float L = 0;
+  12          uchar sum;
+  13          uchar ifLeft = 0;           //左方向是否有障碍物
+  14          uchar ifRight = 0;          //右方向是否有障碍物
+  15          
+  16          void turnLeft()           //左
+  17          void turnRight()            //右
+  18          void turnUp()         //前
+*** ERROR C132 IN LINE 18 OF HCSR04.c: 'turnRight': not in formal parameter list
+*** ERROR C141 IN LINE 18 OF HCSR04.c: syntax error near 'void', expected ';'
+  19          void turnDown()         //后
+*** ERROR C132 IN LINE 19 OF HCSR04.c: 'turnUp': not in formal parameter list
+*** ERROR C141 IN LINE 19 OF HCSR04.c: syntax error near 'void', expected ';'
+  20          //发射超声波测距波形
+  21          void openHc()
+*** ERROR C132 IN LINE 21 OF HCSR04.c: 'turnDown': not in formal parameter list
+*** ERROR C141 IN LINE 21 OF HCSR04.c: syntax error near 'void', expected ';'
+  22          {
+*** ERROR C132 IN LINE 22 OF HCSR04.c: 'openHc': not in formal parameter list
+*** ERROR C141 IN LINE 22 OF HCSR04.c: syntax error near '{', expected ';'
+  23              Trig = 1;
+*** ERROR C136 IN LINE 23 OF HCSR04.c: 'Trig': 'void' on variable
+*** ERROR C244 IN LINE 23 OF HCSR04.c: 'Trig': can't initialize, bad type or class
+*** ERROR C136 IN LINE 23 OF HCSR04.c: 'Trig': 'void' on variable
+*** ERROR C132 IN LINE 23 OF HCSR04.c: 'Trig': not in formal parameter list
+  24              _nop_();          //1us,一共20us
+C51 COMPILER V9.60.0.0   HCSR04                                                            01/19/2022 16:27:34 PAGE 3   
+
+*** ERROR C132 IN LINE 24 OF HCSR04.c: '__nop_': not in formal parameter list
+  25              _nop_();_nop_();_nop_();
+*** ERROR C132 IN LINE 25 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 25 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 25 OF HCSR04.c: '__nop_': not in formal parameter list
+  26              _nop_();_nop_();_nop_();
+*** ERROR C132 IN LINE 26 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 26 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 26 OF HCSR04.c: '__nop_': not in formal parameter list
+  27              _nop_();_nop_();_nop_();
+*** ERROR C132 IN LINE 27 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 27 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 27 OF HCSR04.c: '__nop_': not in formal parameter list
+  28              _nop_();_nop_();_nop_();
+*** ERROR C132 IN LINE 28 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 28 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 28 OF HCSR04.c: '__nop_': not in formal parameter list
+  29              _nop_();_nop_();_nop_();
+*** ERROR C132 IN LINE 29 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 29 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 29 OF HCSR04.c: '__nop_': not in formal parameter list
+  30              _nop_();_nop_();_nop_();
+*** ERROR C132 IN LINE 30 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 30 OF HCSR04.c: '__nop_': not in formal parameter list
+*** ERROR C132 IN LINE 30 OF HCSR04.c: '__nop_': not in formal parameter list
+  31              _nop_();
+*** ERROR C132 IN LINE 31 OF HCSR04.c: '__nop_': not in formal parameter list
+  32            Trig = 0;
+*** ERROR C244 IN LINE 32 OF HCSR04.c: 'Trig': can't initialize, bad type or class
+*** ERROR C132 IN LINE 32 OF HCSR04.c: 'Trig': not in formal parameter list
+  33          }
+*** ERROR C141 IN LINE 33 OF HCSR04.c: syntax error near '}', expected 'hdata'
+  34          //超声波
+  35          uchar getDistance()     
+  36          {
+  37   1        TH0 = 0;
+  38   1        TL0 = 0;
+  39   1        openHc();           //发送一个方波信号，
+  40   1        while(!Echo);       //等于0一直循环，直到Echo为高电平，信号反弹回来
+  41   1        TR0 = 1;            //开启定时器
+  42   1        while(Echo);
+  43   1        TR0 = 0;
+  44   1        sum = TH0*256 + TL0;    //高八位加低八位组成16位
+  45   1        L = (sum*1.78)/100;     //L为距离
+  46   1        if(L < obstructionDis){  //如果距离小于20
+  47   2          LED = 1;
+  48   2          return 0;
+  49   2        }else{
+  50   2          LED = 0;
+  51   2          return 1;
+  52   2        }
+  53   1      }
+  54          
+  55          //初始化
+  56          void Init()
+  57          {
+  58   1        LED = 1;            //LED先亮
+  59   1        EA = 1;
+  60   1        ET1 = 1;
+  61   1        TMOD |= 0x10;       //00000001，方式1
+  62   1        TH1 = (65536 - 100)/256;        //65436,100us
+  63   1        TL1 = (65536 - 100)%256;
+C51 COMPILER V9.60.0.0   HCSR04                                                            01/19/2022 16:27:34 PAGE 4   
+
+  64   1      }
+  65          //主程序
+  66          void main()
+  67          {
+  68   1        Init();
+  69   1        while(1)
+  70   1        {               //如果返回的是1，则说明没有障碍物所以一直向前 
+  71   2          turnUp();
+  72   2          if(getDistance() == 1)
+  73   2            {
+  74   3            }
+  75   2          else{turnDown();}
+  76   2        }
+  77   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  115 ERROR(S)
