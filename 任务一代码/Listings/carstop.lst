@@ -1,0 +1,43 @@
+C51 COMPILER V9.59.0.0   CARSTOP                                                           01/20/2023 19:03:48 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE CARSTOP
+OBJECT MODULE PLACED IN .\Objects\carstop.obj
+COMPILER INVOKED BY: D:\C51\BIN\C51.EXE carstop.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\carstop.l
+                    -st) OBJECT(.\Objects\carstop.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          
+   4          sbit IN21=P1^1;//右后轮
+   5          sbit IN22=P1^2;
+   6          
+   7          sbit IN23=P1^3;//左后轮
+   8          sbit IN24=P1^4;
+   9          
+  10          sbit ENA=P1^5;
+  11          sbit ENB=P1^6;
+  12          
+  13          void carstop()
+  14          {
+  15   1              IN21=0;
+  16   1              IN22=0;
+  17   1              IN23=0;
+  18   1              IN24=0;
+  19   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      9    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

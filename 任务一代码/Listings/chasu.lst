@@ -1,0 +1,134 @@
+C51 COMPILER V9.59.0.0   CHASU                                                             01/17/2023 21:20:56 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE CHASU
+OBJECT MODULE PLACED IN .\Objects\chasu.obj
+COMPILER INVOKED BY: D:\C51\BIN\C51.EXE chasu.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\chasu.lst) 
+                    -OBJECT(.\Objects\chasu.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "0.h"
+   3          #include "1.h"
+   4          
+   5          
+   6          char Counterright, Speedright, Counterleft, Speedleft;
+   7          sbit leftlight=P0^2;
+   8          sbit rightlight=P0^3;
+   9          sbit midlight=P0^1;
+  10          
+  11          sbit IN21=P1^1;//???
+  12          sbit IN22=P1^2;
+  13          
+  14          sbit IN23=P1^3;//???
+  15          sbit IN24=P1^4;
+  16          
+  17          sbit ENA=P1^5;
+  18          sbit ENB=P1^6;
+  19          
+  20          
+  21          void chasu()
+  22          {
+  23   1                              
+  24   1      
+  25   1                      while(1)
+  26   1                              {
+  27   2                                      if(leftlight == 1 && midlight==1 && rightlight == 1 )
+  28   2                                      {
+  29   3                                              Speedleft = 0;
+  30   3                                              Speedright = 0;
+  31   3                      
+  32   3                                      }
+  33   2                                      if(leftlight == 0 && midlight == 0&& rightlight == 0 )
+  34   2                                      {       
+  35   3                                              Speedleft = 60;
+  36   3                                              Speedright = 80;
+  37   3              
+  38   3                                      }
+  39   2                                      if(leftlight == 0 && midlight == 0 && rightlight == 1)
+  40   2                                      {       
+  41   3                                              Speedleft = 60;
+  42   3                                              Speedright = 30;
+  43   3                                              
+  44   3                                      }
+  45   2                                      
+  46   2                                      if(leftlight == 1 && midlight == 0  && rightlight == 0)
+  47   2                                      {       
+  48   3                                              Speedleft = 20;
+  49   3                                              Speedright =100;
+  50   3                                      }
+  51   2                              }
+  52   1                      
+  53   1      }
+  54          
+C51 COMPILER V9.59.0.0   CHASU                                                             01/17/2023 21:20:56 PAGE 2   
+
+  55          
+  56          void Timer1_Routine() interrupt 3
+  57          {
+  58   1              TL1 = 0xA4;             
+  59   1              TH1 = 0xFF;             
+  60   1      //      speedright = 85;
+  61   1              Counterright++; //
+  62   1              if (Counterright < Speedright)  
+  63   1              {
+  64   2                      ENA=1;
+  65   2                      ENB=1;
+  66   2                      IN23=1;
+  67   2                      IN24=0;
+  68   2              }
+  69   1              else                            
+  70   1              {
+  71   2                      ENA=0;          
+  72   2                      ENB=0;
+  73   2              }
+  74   1              if(Counterright==100)
+  75   1              {
+  76   2                      Counterright=0;
+  77   2              }
+  78   1      }
+  79          
+  80          void Timer0_Routine() interrupt 1
+  81          {
+  82   1              TL0 = 0xA4;             
+  83   1              TH0 = 0xFF;             
+  84   1      //      speedleft = 75;
+  85   1              Counterleft++;  
+  86   1              if (Counterleft < Speedleft)    
+  87   1              {
+  88   2                      ENA=1;
+  89   2                      ENB=1;
+  90   2                      IN21=1;
+  91   2                      IN22=0;
+  92   2              }
+  93   1              else                            
+  94   1              {
+  95   2                      ENA=0;          
+  96   2                      ENB=0;
+  97   2              }
+  98   1              if(Counterleft==100)
+  99   1              {
+ 100   2                      Counterleft=0;
+ 101   2              }
+ 102   1      }
+ 103          
+ 104          
+ 105          
+ 106          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    209    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+C51 COMPILER V9.59.0.0   CHASU                                                             01/17/2023 21:20:56 PAGE 3   
+
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
